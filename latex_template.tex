@@ -23,42 +23,63 @@
 \maketitle
 
 \section{Derivative Definition} % Specify main sections this way
-
 % 1 is the problem number
-\begin{problem}{} 
+
 How to define a derivative of a function.
-\end{problem}
+
  
 \textbf{Definition}  %You can also use proof in place of solution
 The derivative of  $f(x)$ with respect to x is the function $f'(x)$ and is defined as,
 \begin{align}
-$f'(x)$ &= $\lim_{h \to 0}\frac{f(x + h) - f(x)}{h} \\
-&= -\frac{\hbar^2}{2m}\nabla^2\psi(x,t) + V(x)\psi(x,t). \nonumber
+f'(x) &= \lim_{h \to 0}\frac{f(x + h) - f(x)}{h}
 \end{align}
-% Use align environments for equations. The \\ is a newline character. The & is the alignment character.
-% Using align* or \nonumber on each line removes equation numbers
-\end{solution}
 
 \subsection{Find a Derivative} % Specify subsections and subsubsections this way
 
 To find the derivative of a function y = f(x) we use the slope formula:
 
 \begin{align}
-$f'(x)$ &= $\lim_{h \to 0}\frac{f(x + h) - f(x)}{h} \\
-&= -\frac{\hbar^2}{2m}\nabla^2\psi(x,t) + V(x)\psi(x,t). \nonumber
+$Slope $ = \frac{Change\hspace{.1cm}in\hspace{.1cm}Y}{Change\hspace{.1cm}in \hspace{.1cm}X} &= \frac{\nabla x}{\nabla y} 
 \end{align}
 
-x changes from x to x+$\nabla$x
-y changes from $f(x)$ to $f(x + $\nabla$x)
 
-Then
-Fill in this slope formula:
+Above\\
+X changes from x to (x+$\nabla$x)\\
+Y changes from f(x) to f(x + $\nabla$x)\\
+\\
+Then\\
+Fill in this slope formula:\\
 \begin{align}
-$frac{$\nabla$x}{$\nabla$y} &= $frac{f(x +$\nabla$x)) - f(x)}{h} \\ \\
-    
-    Simplify it as best we can
-    
-    Then make shrink towards zero
+\frac{\nabla y}{\nabla x} &= \frac{f(x +\nabla x) - f(x)}{\nabla x} 
+\end{align}
+
+Simplify it as best we can\\
+Then make $\nabla$x shrink towards zero.\\
+\begin{problem}{1}
+the function $f(x) = x^2$ and can calculate f(x +\nabla x)\\
+
+Start with:\\
+f(x +\nabla x) = (x +\nabla x)^2
+
+Expand\\
+f(x +\nabla x) = x^2 + 2x\nabla x +(\nabla x)^2
+
+Plug the expanded into the slope formula:
+
+\begin{align}
+\frac{x^2 + 2x\nabla x +(\nabla x)^2 - x^2}{\nabla x} 
+\end{align}
+
+Here $x^2$ and $-x^2$ cancel and the nominator divide through by \nabla x.
+
+Result:
+
+The derivative of $x^2$ is 2x.
+
+\subsection{Who discovered derivative ?} % Specify subsections and subsubsections this way
+
+Calculus, known in its early history as infinitesimal calculus, is a mathematical discipline focused on limits, functions, derivatives, integrals, and infinite series. Isaac Newton discovered calculus in the mid-17th century.
+
 \begin{figure}[h!] % h forces the figure to be placed here, in the text
   \includegraphics[width=0.4\textwidth]
   {GodfreyKneller-IsaacNewton-1689.jpg}  % if pdflatex is used, jpg, pdf, and png are permitted
@@ -66,8 +87,6 @@ $frac{$\nabla$x}{$\nabla$y} &= $frac{f(x +$\nabla$x)) - f(x)}{h} \\ \\
   \label{fig:figlabel}
 \end{figure}
 
-This text should be below the figure unless \LaTeX  decides that a different layout works better.
- 
-% Repeat as needed
- 
+\end{problem}
+
 \end{document}
